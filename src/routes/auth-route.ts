@@ -77,6 +77,9 @@ const register = async (req: Request, res: Response) => {
     return routeResSuccess(res, { email, id: newUserId })
 }
 
+const test = async (req: Request, res: Response) => {
+    return routeResSuccess(res, "OK")
+}
 
 export const AuthRoute = (app: Application) => {
     const authRouter = Router()
@@ -85,4 +88,5 @@ export const AuthRoute = (app: Application) => {
     authRouter.post("/login", hpr(login));
     authRouter.post("/get-verify-email-code", hpr(getVerifyEmailCode));
     authRouter.post("/register", hpr(register));
+    authRouter.get("/test", hpr(test))
 }

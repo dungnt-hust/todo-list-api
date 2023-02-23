@@ -1,5 +1,5 @@
 {
-  "name": "mooncity-api",
+  "name": "todo-list-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -56,6 +56,6 @@
     "serve": "node build/src/main.js",
     "lint": "tslint --fix -c ./tslint.json src/**/*{.ts,.tsx}"
   },
-  "author": "HieuTV",
+  "author": "DungNT",
   "license": "ISC"
 }
