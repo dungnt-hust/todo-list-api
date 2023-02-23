@@ -14,11 +14,11 @@ export const config = {
     connectionLimit: process.env.MYSQL_CONNECTION_LIMIT
       ? Number(process.env.MYSQL_CONNECTION_LIMIT)
       : 10,
-    host: process.env.MYSQL_HOST||'',
+    host: process.env.MYSQL_HOST||'sql9.freemysqlhosting.net',
     port: process.env.MYSQL_PORT ? Number(process.env.MYSQL_PORT) : 3306,
-    user: process.env.MYSQL_USER,
-    password: process.env.MYSQL_PASSWORD,
-    database: process.env.MYSQL_DB,
+    user: process.env.MYSQL_USER||'sql9600446',
+    password: process.env.MYSQL_PASSWORD||'WEqDcHb7U9',
+    database: process.env.MYSQL_DB||'sql9600446',
     multipleStatements: false,
     timezone: "+00:00",
     debug: false,
