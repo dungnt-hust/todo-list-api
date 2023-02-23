@@ -5,6 +5,7 @@ import PasswordValidator from 'password-validator'
 import {MathUtils} from "./math-utils"
 import {TokenType} from "./enum";
 import crypto from "crypto";
+import Joi from "joi";
 
 // --- Create password validator schema
 const schema = new PasswordValidator();
@@ -107,6 +108,16 @@ const generateString = (length: number = 6) => {
     }
     return salt;
 };
+
+const baseFilter = {
+    status: Joi.number().integer(),
+    limit: Joi.number().integer(),
+    offset: Joi.number().integer(),
+    order_by: Joi.string().default('updated_time'),
+    reverse: Joi.boolean().default(true),
+}
+
+
 export const Utils = {
     hashPassword,
     comparePassword,
@@ -121,4 +132,5 @@ export const Utils = {
     getRandomInt,
     generateCode,
     generateString,
+    baseFilter
 }
