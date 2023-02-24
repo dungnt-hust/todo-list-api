@@ -29,7 +29,8 @@ const update = async (req: Request, res: Response) => {
         .keys({
             id: Joi.string().required(),
             description: Joi.string(),
-            name: Joi.string()
+            name: Joi.string(),
+            status: Joi.number()
         })
         .validateAsync({...req.query, ...req.params, ...req.body});
 
